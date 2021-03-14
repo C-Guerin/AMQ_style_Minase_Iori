@@ -8,6 +8,8 @@
 :root {
     --bg: url(https://www.project-imas.com/w/images/6/69/Iori_TD_SSR2.png); /*Change the background of the game*/
 }
+
+/*Main*/
 #startPage {
     background-image: var(--bg);
     background-size: 100% 100%;
@@ -21,100 +23,68 @@
     background-size: cover;
 }
 #gameChatPage > .col-xs-9 {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.7); /*Overrides in-game background with custom background*/
 }
 #gcGameChatButton > .col-xs-9 {
     color: #ffffff; 
     box-shadow: none;
     text-shadow: 0 0 20px #96FF96, 0 0 30px #66FF66, 0 0 40px #66FF66, 0 0 50px #66FF66 !important;
 }
-#rbMajorFilters {
-    padding-left: 10px;
-    box-shadow: none;
-    
-}
 
+/*XP bar and level*/
 #xpBarOuter {
-	background-color: #87688C; /*Change the color of the background bar of xp*/
-    
+	background-color: #87688C; /*Changes the colour of the background bar of xp*/        
 }
 #xpBarInner {
-    background: #A30DBB; /*Change the color of the bar of xp*/
+    background: #A30DBB; /*Change the colour of the bar of xp*/
     box-shadow: none;
-
 }
 .levelText {
     color: #e3fcff; /*Change the Color of text of xp bar*/
 }
 
-.lobbyAvatarImgContainer { /*Background of  avatar image lobby*/
-    background-color: transparent;
+/*Room Browser*/
+#rbMajorFilters {
+    padding-left: 10px;
+    width: 280px;
+    height: 40px;
+    box-shadow: none;    
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+#roomBrowserHostButton {
+    border-radius: 12px;
+    color: white;
+    background: rgba(0, 0, 0, 0.2); /*TODO: This doesn't work. Fix it*/
 }
 
-
-#avatarUserImgContainer:hover {
-    opacity: 1.0;
-    filter: alpha(opacity=100);
+/*Lobby*/
+#LobbyRoomNameContainer {
+    display: none;
 }
-.lobbyAvatarTextContainer {
-    background: rgba(0, 0, 0, 0.7);
+.lobbyAvatarNameContainer {
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
+/*Chat*/
 #gameChatPage > .col-xs-9 {
 	background-color: rgba(0, 0, 0, 0);
 }
 #gameChatContainer {
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.2);
 }    
-#qpAnimeNameHider {
-    background-color: #1b1b1b;
-}
 
-#qpInfoHider {
-    background-color: #1b1b1b;
-    height: calc(100% - 30px);
-}
-#xpBarCoverInner {
-    background-color: #1b1b1b
-}
-.qpAvatarNameContainer {
-    background-color: #1b1b1b
-}
-.qpAvatarAnswerContainer {
-    background-color: #1b1b1b
-}
-.rbRoom, .rbrRoomImageContainer {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-.qpAvatarImgContainer {
-    box-shadow: none;
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.3);
-}
-.qpAvatarLevelText {
-    background-color: #1b1b1b;
-    border-radius: 1px 1px 50px 50px;
-                                
-}
-.qpAvatarPointText {
-    background-color: #1b1b1b;
-    border-radius: 50px 50px 1px 1px;
-}
-.qpAvatarNameContainer .avatarIsHostContainer {
-    position: fixed;
-    left: 24px;
-    top: 155px;
-    z-index: -1;
-}
-
+/*Bottom Bar*/
 #mainMenuSocailButton {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 #footerMenuBarBackground, #rightMenuBarPartContainer {
     background-color: rgba(0, 0, 0, 0.3);
 }
+
+/*Main Menu*/
 #mpPlayButton, #mpExpandButton, #mpLeaderboardButton, #mpRankedButton {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.1);
     box-shadow: none;
     color: white;
     text-shadow: 1px 1px #17202a;
@@ -124,26 +94,15 @@
     background-color: rgba(0, 0, 0, 0.5);
     text-shadow: 1px 1px #17202a;
 }
-#mpRankedDescriptionButton > h1 {
+#mpRankedDescriptionButton > h1, #mpRankedTimer > h3 {
     color: white;  
     text-shadow: 1px 1px #17202a;
 }
-#mpRankedDescriptionButton {
-    background-color: rgba(0, 0, 0, 0.1);
-    
+#mpRankedDescriptionButton, #mpRankedTimer {
+    background-color: rgba(1, 1, 1, 0.3); 
 }
-#mpRankedTimer > h3 {
-    color: white;
-    text-shadow: 1px 1px #17202a;
-}
-#mpDriveDonationContainer .button {
-    background-color: rgba(0, 0, 0, 0.1);
-    box-shadow: 5px 5px transparent;
-}
-#mpDriveStatsContainer {
-    background-color: rgba(0, 0, 0, 0.1);
-    box-shadow: 5px 5px transparent;
-}
+
+/*Hidden elements*/
 #mpAvatarDriveContainer, #mpAvatarDriveHeaderShadowHider .floatingContainer {
     background-color: rgba(0, 0, 0, 0.5);
     display: none;
@@ -153,9 +112,6 @@
     box-shadow: 5px 5px transparent;
     text-shadow: 1px 1px #17202a;
     display: none;
-}
-#mpRankedDescriptionButton {
-    background-color: rgba(1, 1, 1, 1.5); 
 }
 #mpPromoCycleContainer {
  display: none;   
@@ -167,14 +123,13 @@
 #mpPromoOuterContainer {
     display: none;
 }
-
 #awSkinPreviewContainer {
     background-color: transparent;
     display: none;
 }
-.lobbyAvatarNameContainer {
-    background-color: rgba(0, 0, 0, 0.3);
-}
+
+
+
 .qpAvatarImgContainer {
     background-color: rgba(0, 0, 0, 0.5);
     outline: 2px solid DimGray;
@@ -219,7 +174,7 @@
     box-shadow: none;
 }
 
-#lbStartButton, #lnSettingsButton, #gcInput, #roomBrowserHostButton{
+#lbStartButton, #lnSettingsButton, #gcInput {
     background-color: rgba(0, 0, 0, 0.5);    
     color: white;
     text-shadow: 1px 1px #17202a;
